@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('start/assets/images/astro_moon.png'),
+            image: AssetImage('assets/images/astro_moon.png'),
           ),
         ),
       ),
