@@ -1,29 +1,18 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  late double? _deviceHeight, _deviceWidth;
+
+  HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    _deviceHeight = MediaQuery.of(context).size.height;
+    _deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: SafeArea(child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Stack(
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _astrotext(),
-                _astroImage(),
-              ],
-            ),
-          ],
-        ),
-      ))
+      body: SafeArea(child: Container(child: _astrotext())),
     );
   }
-
 
   Widget _astrotext() {
     return const Text(
@@ -35,6 +24,7 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
   Widget _astroImage() {
     return Container(
       decoration: const BoxDecoration(
