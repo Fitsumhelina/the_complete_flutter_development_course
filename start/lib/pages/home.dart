@@ -6,7 +6,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _astrotext()
+      body: SafeArea(child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Stack(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _astrotext(),
+                _astroImage(),
+              ],
+            ),
+          ],
+        ),
+      ))
     );
   }
 
