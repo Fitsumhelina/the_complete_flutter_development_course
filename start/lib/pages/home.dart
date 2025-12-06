@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
       "#GoMoon",
       style: TextStyle(
         color: Colors.white,
-        fontSize: 120,
+        fontSize: 70,
         fontWeight: FontWeight.w800,
       ),
     );
@@ -52,8 +52,11 @@ class HomePage extends StatelessWidget {
 
   Widget _astroImageWidget() {
     return Container(
+      height: _deviceHeight * 0.50,
+      width: _deviceWidth * 0.65,
       decoration: const BoxDecoration(
         image: DecorationImage(
+          fit: BoxFit.fill,
           image: AssetImage("assets/images/astro_moon.png"),
         ),
       ),
